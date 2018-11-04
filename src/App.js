@@ -9,10 +9,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const url = process.env.NODE_ENV !== 'production' ? '/posts' : 'https://scary-mummy-76426.herokuapp.com/posts/' 
+    const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000/posts' : 'https://scary-mummy-76426.herokuapp.com/posts/' 
     fetch(url)
-      .then(res => res.json())
       .then(res => {
+        return res.json()
+      })
+      .then(res => {
+        console.log(res)
         this.setState({ posts: res })
       })
   }
