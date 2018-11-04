@@ -9,7 +9,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/posts')
+    const url = process.env.NODE_ENV !== 'production' ? '/posts' : 'https://scary-mummy-76426.herokuapp.com/posts/' 
+    fetch(url)
       .then(res => res.json())
       .then(res => {
         this.setState({ posts: res })
