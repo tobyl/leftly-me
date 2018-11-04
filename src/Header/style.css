@@ -1,0 +1,46 @@
+.Header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Header svg {
+  display: inline-block;
+  width: 50%;
+}
+
+.Header #dot {
+  fill: #f4a142;
+}
+
+.Header .Detail {
+  color: #f1f1f1;
+  display: none;
+  font-size: 90%;
+}
+
+.Header .Detail hr {
+  height: 1px;
+  background: #e1e1e1;
+  border: none;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.Header a {
+  color: #f4a142;
+}
+
+@media (min-width: 768px) {
+  .Header {
+    text-align: center;
+    float: left;
+    width: 30%;
+    margin: 0;
+  }
+  .Header svg {
+    margin-bottom: 2rem;
+  }
+  .Header .Detail {
+    display: block;
+  }
+}

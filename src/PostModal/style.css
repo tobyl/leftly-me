@@ -1,0 +1,63 @@
+.PostModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.75);
+}
+
+.ModalBody {
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  margin: 50% 1.5rem 0 1.5rem;
+  padding: 0.75rem;
+  transform: translateY(-75%);
+}
+
+.ModalBody .PostMeta {
+  float: left;
+}
+
+.ModalBody > .PostAvatar {
+  width: 65px;
+  margin-bottom: 0.5rem;
+}
+
+.ModalBody > .PostAvatar.Retweet {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ModalBody > .PostAvatar.Retweet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ModalBody .Close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.ModalBody .Close svg {
+  fill: #e1e1e1;
+  width: 20px;
+  transition: transform 91ms ease-out;
+}
+
+.ModalBody .Close:hover svg {
+  fill: #f4a142;
+  transform: scale(1.25);
+}
+
+@media (min-width: 640px) {
+  .ModalBody {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

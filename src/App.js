@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import Post from './Post'
 
-class App extends Component {
+class App extends React.Component {
+  state = {
+    posts: []
+  }
+
+  componentDidMount() {
+    fetch('/posts')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({ posts: res })
+      })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <div className="BlogBody">
+          {this.state.posts.map((post, i) =>
+            <Post
+              first={i === 0}
+              last={i === this.state.posts.length - 1}
+              key={post.slug}
+              post={post}
+            />
+          )}
+          <Footer />
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
