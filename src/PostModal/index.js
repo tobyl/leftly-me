@@ -9,11 +9,10 @@ class PostModal extends React.Component {
     if (this.props.post.type === 'retweet') {
       return distanceInWords(this.props.post.tweet_created, new Date())
     }
-    return distanceInWords(this.props.post.created, new Date());
+    return distanceInWords(this.props.post.created, new Date())
   }
   render() {
-    const { body, avatar, post } = this.props
-    console.log(post)
+    const { body, avatar } = this.props
     return (
       <div className="PostModal">
         <div className="ModalBody">
