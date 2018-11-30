@@ -6,7 +6,7 @@ const Footer = () => (
   <div className="Footer">
     <small>
       Zero copyright whatsoever.<br />
-      Full credit to <a href="/">Chris Benotto</a> for the Toby avatar.
+      Full credit to <a href="https://dribbble.com/chrisbenotto">Chris Benotto</a> for the Toby avatar.
     </small>
   </div>
 )

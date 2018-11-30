@@ -32,10 +32,10 @@ const Header = () => (
       and every other one of the thousand web technologies announced in the past
       week.
       <hr />
-      Most of my day-to-day work is proprietary, but I'm on <a href="/">GitHub</a>.
+      Most of my day-to-day work is proprietary, but I'm on <a href="https://github.com/tobyl">GitHub</a>.
       <hr />
-      I'm occasionally active on <a href="/">Stack Overflow</a>, even more occasionally helpful.
-      <hr />I rarely talk on <a href="/">Twitter</a>, but I'm a good listener.
+      I'm occasionally active on <a href="https://stackoverflow.com/users/4008056/toby">Stack Overflow</a>, even more occasionally helpful.
+      <hr />I rarely talk on <a href="https://twitter.com/TobyLeftly">Twitter</a>, but I'm a good listener.
     </div>
   </div>
 )
