@@ -1,4 +1,7 @@
 .PostModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,31 +13,33 @@
 
 .ModalBody {
   position: relative;
+  top: -40px;
   background: #fff;
   border-radius: 3px;
-  margin: 50% 1.5rem 0 1.5rem;
-  padding: 0.75rem;
-  transform: translateY(-75%);
+  padding: 1.25rem;
 }
 
-.ModalBody .PostMeta {
+.ModalBody .PostAvatar {
   float: left;
-}
-
-.ModalBody > .PostAvatar {
   width: 65px;
   margin-bottom: 0.5rem;
+  margin-right: 1rem;
 }
 
-.ModalBody > .PostAvatar.Retweet {
+.ModalBody .PostAvatar.Retweet {
   border-radius: 50%;
   overflow: hidden;
 }
 
-.ModalBody > .PostAvatar.Retweet img {
+.ModalBody .PostAvatar.Retweet img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.ModalBody .PostMeta p {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .ModalBody .Close {
